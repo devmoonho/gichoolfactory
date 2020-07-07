@@ -11,18 +11,18 @@ services:
       --collation-server=utf8mb4_unicode_ci
     env_file: .env
     environment:
-      - MYSQL_DATABASE=wordpress
+      - MYSQL_DATABASE=gichool
     networks:
       - app-network
     volumes:
       - mydata:/var/lib/mysql
     ports:
-      - '33061:3306'
+      - '33061:3306' # 배포시 3306으로 수정
 
   wordpress:
     depends_on: 
       - db
-    image: 222.112.48.9:5000/gichool
+    image: 222.112.48.9:5000/gichool:0.0.1
     container_name: wordpress
     restart: unless-stopped
     env_file: .env
@@ -30,7 +30,7 @@ services:
       - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_USER=$MYSQL_USER
       - WORDPRESS_DB_PASSWORD=$MYSQL_PASSWORD
-      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_NAME=gichool
     volumes:
       - mywordpress:/var/www/html
     networks:
