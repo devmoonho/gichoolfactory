@@ -1,0 +1,30 @@
+/*
+Theme Name: gichool 
+Author: dev moonho 
+Author URI: https://gichoolfactory.net/
+Description: gichool factory site using wordpress
+Version: 0.0.2 
+Requires at least: 4.7
+Requires PHP: 5.2.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gichool 
+Tags: one-column, gichool, 기출, 문제, 기출문제 
+
+This theme, like WordPress, is licensed under the GPL.
+gichool factory site using wordpress
+*/
+
+html {
+  font-size  : 100%;
+  line-height: 1.8;
+}
+
+a {
+  color          : black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
