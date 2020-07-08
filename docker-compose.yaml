@@ -22,7 +22,7 @@ services:
   wordpress:
     depends_on: 
       - db
-    image: 222.112.48.9:5000/gichool:0.0.1
+    image: 222.112.48.9:5000/gichool:0.0.2
     container_name: wordpress
     restart: unless-stopped
     env_file: .env

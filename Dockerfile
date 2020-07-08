@@ -2,7 +2,6 @@ FROM wordpress:5.4.2-fpm-alpine
 
 LABEL maintainer = "dev.moonho@gmail.com"
 
-WORKDIR /usr/src/app
+WORKDIR /var/www/html
 
-ARG CONTENT_DIR=/var/www/html
-COPY . ${CONTENT_DIR} 
+COPY . ${WORKDIR} 
